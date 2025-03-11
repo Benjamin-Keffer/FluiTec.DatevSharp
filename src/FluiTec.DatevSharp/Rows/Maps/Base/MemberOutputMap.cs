@@ -18,7 +18,7 @@ namespace FluiTec.DatevSharp.Rows.Maps.Base
         /// <param name="member">       The member. </param>
         /// <param name="datevOutput">  A function delegate that yields a string. </param>
         public MemberOutputMap(MemberInfo member, Func<T, string> datevOutput) : base(member,
-            datevOutput.CoerceToNonGeneric())
+            x => datevOutput((T)x))
         {
             GenericDatevOutput = datevOutput;
         }
