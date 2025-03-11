@@ -36,7 +36,7 @@ namespace FluiTec.DatevSharp
                 $"{Created.ToDatevDateTime()};{Imported};{Source.ToDatev()};{ExportedBy.ToDatev()};{ImportedBy.ToDatev()};" +
                 $"{ConsultantNumber};{ClientNumber};{StartOfBusinessYear.ToDatevDate()};{ImpersonalAccountsLength};" +
                 $"{BookingsFrom.ToDatevDate()};{BookingsTill.ToDatevDate()};{Description.ToDatev()};{DictationShortName.ToDatev()};" +
-                $"{BookingType};{BillingIntention};{Fixing.ToDatev()};{CurrencySymbol.ToDatev()};;;;;;;;;";
+                $"{BookingType};{BillingIntention};{Fixing.ToDatev()};{CurrencySymbol.ToDatev()};;;;;;{Manufacturer.ToDatev()};;;{ApplicationId.ToDatev()}";
         }
 
         #endregion
@@ -154,7 +154,7 @@ namespace FluiTec.DatevSharp
         /// <summary>   Gets or sets the description. </summary>
         /// <value> The description. </value>
         /// <remarks>
-        ///     e.g. "Rechnungen M‰rz", MaxLength=30
+        ///     e.g. "Rechnungen M√§rz", MaxLength=30
         /// </remarks>
         public string Description { get; set; }
 
@@ -176,7 +176,7 @@ namespace FluiTec.DatevSharp
         /// <summary>   Gets or sets the billing intention. </summary>
         /// <value> The billing intention. </value>
         /// <remarks>
-        ///     0 oder leer = vom Rechnungslegungszweck unabh‰ngig
+        ///     0 oder leer = vom Rechnungslegungszweck unabh√§ngig
         ///     50 = Handelsrecht
         ///     30 = Steuerrecht
         ///     64 = IFRS
@@ -203,6 +203,20 @@ namespace FluiTec.DatevSharp
         ///     https://msdn.microsoft.com/de-de/library/system.globalization.regioninfo.isocurrencysymbol(v=vs.110).aspx
         /// </remarks>
         public string CurrencySymbol { get; set; }
+
+        /// <summary>   Gets or sets the manufacturer. </summary>
+        /// <value> The manufacturer. </value>
+        /// <remarks>
+        ///     MaxLength=30
+        /// </remarks>
+        public string Manufacturer { get; set; }
+
+        /// <summary>   Gets or sets the application identifier. </summary>
+        /// <value> The application identifier. </value>
+        /// <remarks>
+        ///     MaxLength=30
+        /// </remarks>
+        public string ApplicationId { get; set; }
 
         #endregion
     }

@@ -209,7 +209,7 @@ namespace FluiTec.DatevSharp.Rows.BookingRow
         ///     The source.
         /// </value>
         [DatevField(101, 4)]
-        public string Source => "SV";
+        public string Source => ""; // BK: Was before SV
 
         /// <summary>   Gets or sets the cash discount block. </summary>
         /// <value> The cash discount block. </value>

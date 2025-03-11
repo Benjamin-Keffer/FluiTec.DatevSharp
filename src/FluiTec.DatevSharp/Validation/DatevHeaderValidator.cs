@@ -27,7 +27,7 @@ namespace FluiTec.DatevSharp.Validation
             RuleFor(header => header.DictationShortName).Length(0, 2);
             When(header => header.DataCategory.Number == bookingNumber,
                 () => RuleFor(header => header.BookingType).InclusiveBetween(1, 2));
-            var validIntentions = new[] {0, 50, 30, 64, 40, 11, 12};
+            var validIntentions = new[] { 0, 50, 30, 64, 40, 11, 12 };
             When(header => header.DataCategory.Number == bookingNumber, () =>
                 RuleFor(header => header.BillingIntention)
                     .NotNull()
@@ -36,6 +36,8 @@ namespace FluiTec.DatevSharp.Validation
                     .WithMessage(
                         $"BillingIntention must be one of the following values: {string.Join(",", validIntentions.Select(i => i.ToString()))}."));
             RuleFor(header => header.CurrencySymbol).Length(0, 3);
+            RuleFor(header => header.Manufacturer).Length(0, 30);
+            RuleFor(header => header.ApplicationId).Length(0, 30);
         }
     }
 }
