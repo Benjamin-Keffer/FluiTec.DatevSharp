@@ -1,6 +1,4 @@
 using System;
-using System.Globalization;
-using System.Threading;
 using FluiTec.DatevSharp.Helpers;
 using FluiTec.DatevSharp.Interfaces;
 
@@ -57,7 +55,7 @@ namespace FluiTec.DatevSharp
                 if (DataCategory.Number == DataCategories.Instance.BookingCategory.Number)
                 {
                     BookingType = 1;
-                    CurrencySymbol = new RegionInfo(Thread.CurrentThread.CurrentUICulture.LCID).ISOCurrencySymbol;
+                    CurrencySymbol = DatevFormat.DefaultCurrencySymbol;
                     BillingIntention = 0;
                 }
                 else

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace FluiTec.DatevSharp.Helpers
 {
@@ -12,7 +13,7 @@ namespace FluiTec.DatevSharp.Helpers
         /// <returns>   dateTime as a string. </returns>
         public static string ToDatevDateTime(this DateTime dateTime)
         {
-            return dateTime.ToString("yyyyMMddHHmmssfff");
+            return dateTime.ToString("yyyyMMddHHmmssfff", CultureInfo.InvariantCulture);
         }
 
         /// <summary>   A DateTime extension method that converts a dateTime to a datev date. </summary>
@@ -20,7 +21,7 @@ namespace FluiTec.DatevSharp.Helpers
         /// <returns>   dateTime as a string. </returns>
         public static string ToDatevDate(this DateTime dateTime)
         {
-            return dateTime.ToString("yyyyMMdd");
+            return dateTime.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -30,7 +31,7 @@ namespace FluiTec.DatevSharp.Helpers
         /// <returns>   dateTime as a string. </returns>
         public static string ToDatevDateTime(this DateTime? dateTime)
         {
-            return dateTime?.ToString("yyyyMMddHHmmssfff");
+            return dateTime?.ToString("yyyyMMddHHmmssfff", CultureInfo.InvariantCulture);
         }
 
         /// <summary>   A DateTime extension method that converts a dateTime to a datev date. </summary>
@@ -38,7 +39,7 @@ namespace FluiTec.DatevSharp.Helpers
         /// <returns>   dateTime as a string. </returns>
         public static string ToDatevDate(this DateTime? dateTime)
         {
-            return dateTime?.ToString("yyyyMMdd");
+            return dateTime?.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -48,7 +49,7 @@ namespace FluiTec.DatevSharp.Helpers
         /// <returns>   dateTime as a string. </returns>
         public static string ToShortDatevDate(this DateTime? dateTime)
         {
-            return dateTime?.ToString("ddMM");
+            return dateTime?.ToString("ddMM", CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -58,7 +59,7 @@ namespace FluiTec.DatevSharp.Helpers
         /// <returns>   dateTime as a string. </returns>
         public static string ToShortDatevDate(this DateTime dateTime)
         {
-            return dateTime.ToString("ddMM");
+            return dateTime.ToString("ddMM", CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -68,7 +69,7 @@ namespace FluiTec.DatevSharp.Helpers
         /// <returns>   dateTime as a string. </returns>
         public static string ToShortDatevYear(this DateTime? dateTime)
         {
-            return dateTime?.ToString("yyyy");
+            return dateTime?.ToString("yyyy", CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -78,7 +79,7 @@ namespace FluiTec.DatevSharp.Helpers
         /// <returns>   dateTime as a string. </returns>
         public static string ToShortDatevYear(this DateTime dateTime)
         {
-            return dateTime.ToString("yyyy");
+            return dateTime.ToString("yyyy", CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -88,7 +89,7 @@ namespace FluiTec.DatevSharp.Helpers
         /// <returns>   dateTime as a string. </returns>
         public static string ToDatevDateReverse(this DateTime dateTime)
         {
-            return dateTime.ToString("ddMMyyyy");
+            return dateTime.ToString("ddMMyyyy", CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -98,7 +99,7 @@ namespace FluiTec.DatevSharp.Helpers
         /// <returns>   dateTime as a string. </returns>
         public static string ToDatevDateReverse(this DateTime? dateTime)
         {
-            return dateTime?.ToString("ddMMyyyy");
+            return dateTime?.ToString("ddMMyyyy", CultureInfo.InvariantCulture);
         }
     }
 }

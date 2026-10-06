@@ -1,6 +1,5 @@
-﻿using System.Globalization;
-using System.Threading;
-using FluiTec.DatevSharp.Attributes;
+﻿using FluiTec.DatevSharp.Attributes;
+using FluiTec.DatevSharp.Helpers;
 using FluiTec.DatevSharp.Interfaces;
 using FluiTec.DatevSharp.Rows.Enums;
 using FluiTec.DatevSharp.Rows.Maps;
@@ -15,7 +14,7 @@ namespace FluiTec.DatevSharp.Rows.BookingRow
         public BookingRow()
         {
             Claim = Claim.Debit;
-            CurrencySymbol = new RegionInfo(Thread.CurrentThread.CurrentUICulture.LCID).ISOCurrencySymbol;
+            CurrencySymbol = DatevFormat.DefaultCurrencySymbol;
             Fixing = false;
         }
     }

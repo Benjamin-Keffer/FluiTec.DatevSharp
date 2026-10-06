@@ -16,7 +16,7 @@ namespace FluiTec.DatevSharp.Helpers
         /// </returns>
         public static string ToDatev(this float num)
         {
-            return num.ToString("0.00");
+            return num.ToString("0.00", DatevFormat.Numbers);
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace FluiTec.DatevSharp.Helpers
         /// </returns>
         public static string ToDatev(this float? num)
         {
-            return num?.ToString("0.00");
+            return num?.ToString("0.00", DatevFormat.Numbers);
         }
     }
 }
